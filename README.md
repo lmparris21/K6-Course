@@ -46,6 +46,16 @@ The project includes several types of performance tests:
    - Basic example script for learning k6
    - Good starting point for newcomers
 
+8. **Scenarios Test** (`scenarios.ts`)
+   - Demonstrates different k6 execution patterns
+   - Shows how to configure multiple scenarios in a single test
+   - Examples of ramping VUs, constant VUs, and per-iteration scenarios
+
+9. **Custom Metrics** (`custom-metrics.ts`)
+   - Shows how to create and track custom metrics
+   - Examples of counters, rates, gauges, and trends
+   - Demonstrates metric tagging and grouping
+
 ## Running Tests
 
 To run any test, use the following command:
