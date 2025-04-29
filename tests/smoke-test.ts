@@ -11,12 +11,12 @@ export const options = {
 // Main test function - executed for each virtual user
 export default function () {
     // Visit the homepage
-    http.get('https://test.k6.io');
+    http.get('https://quickpizza.grafana.com/test.k6.io/');
     sleep(1); // Wait for 1 second
     // Visit the contacts page
-    http.get('https://test.k6.io/contacts.php');
+    http.get('https://quickpizza.grafana.com/contacts.php');
     sleep(2); // Wait for 2 seconds
     // Visit the news page
-    http.get('https://test.k6.io/news.php');
+    http.get('https://quickpizza.grafana.com/news.php');
     sleep(2); // Wait for 2 seconds
 }

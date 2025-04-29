@@ -56,6 +56,21 @@ The project includes several types of performance tests:
    - Examples of counters, rates, gauges, and trends
    - Demonstrates metric tagging and grouping
 
+10. **Groups** (`groups.ts`)
+    - Demonstrates how to organize and group tests
+    - Shows how to create logical test groupings
+    - Helps in organizing test results and analysis
+
+11. **Custom Tags** (`custom-tags.ts`)
+    - Shows how to implement custom tagging in k6 tests
+    - Demonstrates advanced tagging strategies
+    - Examples of using tags for test organization and metrics filtering
+
+12. **System Tags** (`system-tags.ts`)
+    - Examples of working with k6's built-in system tags
+    - Shows how to use and configure system-level metrics
+    - Demonstrates system tag customization
+
 ## Running Tests
 
 To run any test, use the following command:

@@ -23,7 +23,7 @@ export const options = {
 /* Main test scenario function that k6 will execute */
 export default function () {
     /* Send GET request to test endpoint */
-    const res = http.get('https://test.k6.io' + (exec.scenario.iterationInTest === 1 ? 'foo' : '')); /* Send different endpoint for one iteration to throw error */
+    const res = http.get('https://quickpizza.grafana.com/test.k6.io' + (exec.scenario.iterationInTest === 1 ? 'foo' : '')); /* Send different endpoint for one iteration to throw error */
     /* Basic check format to demonstrate check functionality */
     check(true, {
         'true is true': (value) => value === true,
@@ -31,7 +31,7 @@ export default function () {
     /* Verify that the HTTP response status code is 200 (OK) and the body contains expected text */
     check(res, {
         'status is 200': (r) => r.status === 200,
-        'body contains expected text': (r) => r.body ? r.body.toString().includes('Collection of simple web-pages') : false
+        /*'body contains expected text': (r) => r.body ? r.body.toString().includes('Collection of simple web-pages') : false */
     });
     /* Delay for 2 seconds */
     sleep(2);

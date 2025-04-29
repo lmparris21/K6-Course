@@ -24,14 +24,14 @@ const newsPageResponseTime = new Trend('response_time_news_page');
 /* Main test function - executed for each virtual user */
 export default function () {
     /* Send GET request to the test endpoint */
-    let res = http.get('https://test.k6.io'); 
+    let res = http.get('https://quickpizza.grafana.com/test.k6.io/'); 
     /* Increment the custom metric */
     myCounter.add(1);
     /* Wait for 1 second before next iteration */
     sleep(1);
 
     /* Send GET request to the news page endpoint */
-    res = http.get('https://test.k6.io/news.php');
+    res = http.get('https://quickpizza.grafana.com/news.php');
     /* Add the response time to the custom trend metric */
     newsPageResponseTime.add(res.timings.duration);
     /* Wait for 1 second before next iteration */

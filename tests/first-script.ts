@@ -11,7 +11,7 @@ export const options = {
 /* Main test function - executed for each virtual user */
 export default function () {
     /* Send GET request to the test endpoint */
-    http.get('https://test.k6.io');
+    http.get('https://quickpizza.grafana.com/test.k6.io/');
     /* Wait for 1 second before next iteration */
     sleep(1);
 }
