@@ -18,77 +18,96 @@ npm install
 
 The project includes several types of performance tests:
 
-1. **Smoke Test** (`smoke-test.ts`)
-   - Basic test to verify system functionality
-   - Minimal load testing to ensure the system works under basic conditions
-
-2. **Load Test** (`load-test.ts`)
-   - Evaluates system behavior under expected normal load
-   - Verifies system performance for typical usage patterns
-
-3. **Stress Test** (`stress-test.ts`)
-   - Tests system behavior under heavy load
-   - Identifies breaking points and system limitations
-
-4. **Spike Test** (`spike-test.ts`)
-   - Evaluates system response to sudden, large spikes in user load
-   - Tests system recovery capabilities
-
-5. **Soak Test** (`soak-test.ts`)
-   - Long-duration test to identify performance degradation over time
-   - Validates system stability under sustained load
-
-6. **Breakpoint Test** (`breakpoint-test.ts`)
-   - Determines system breaking points
-   - Identifies maximum operational capacity
-
-7. **First Script** (`first-script.ts`)
+1. **First Script** (`1-first-script.ts`)
    - Basic example script for learning k6
    - Good starting point for newcomers
 
-8. **Scenarios Test** (`scenarios.ts`)
+2. **Smoke Test** (`2-smoke-test.ts`)
+   - Basic test to verify system functionality
+   - Minimal load testing to ensure the system works under basic conditions
+
+3. **Load Test** (`3-load-test.ts`)
+   - Evaluates system behavior under expected normal load
+   - Verifies system performance for typical usage patterns
+
+4. **Stress Test** (`4-stress-test.ts`)
+   - Tests system behavior under heavy load
+   - Identifies breaking points and system limitations
+
+5. **Spike Test** (`5-spike-test.ts`)
+   - Evaluates system response to sudden, large spikes in user load
+   - Tests system recovery capabilities
+
+6. **Breakpoint Test** (`6-breakpoint-test.ts`)
+   - Determines system breaking points
+   - Identifies maximum operational capacity
+
+7. **Soak Test** (`7-soak-test.ts`)
+   - Long-duration test to identify performance degradation over time
+   - Validates system stability under sustained load
+
+8. **Scenarios Test** (`8-scenarios.ts`)
    - Demonstrates different k6 execution patterns
    - Shows how to configure multiple scenarios in a single test
    - Examples of ramping VUs, constant VUs, and per-iteration scenarios
 
-9. **Custom Metrics** (`custom-metrics.ts`)
+9. **Custom Metrics** (`9-custom-metrics.ts`)
    - Shows how to create and track custom metrics
    - Examples of counters, rates, gauges, and trends
    - Demonstrates metric tagging and grouping
 
-10. **Groups** (`groups.ts`)
-    - Demonstrates how to organize and group tests
-    - Shows how to create logical test groupings
-    - Helps in organizing test results and analysis
-
-11. **Custom Tags** (`custom-tags.ts`)
-    - Shows how to implement custom tagging in k6 tests
-    - Demonstrates advanced tagging strategies
-    - Examples of using tags for test organization and metrics filtering
-
-12. **System Tags** (`system-tags.ts`)
+10. **System Tags** (`10-system-tags.ts`)
     - Examples of working with k6's built-in system tags
     - Shows how to use and configure system-level metrics
     - Demonstrates system tag customization
 
+11. **Custom Tags** (`11-custom-tags.ts`)
+    - Shows how to implement custom tagging in k6 tests
+    - Demonstrates advanced tagging strategies
+    - Examples of using tags for test organization and metrics filtering
+
+12. **Groups** (`12-groups.ts`)
+    - Demonstrates how to organize and group tests
+    - Shows how to create logical test groupings
+    - Helps in organizing test results and analysis
+
+13. **Expected Response** (`13-expected-response.ts`)
+    - Shows how to validate and check expected responses
+    - Demonstrates response validation techniques
+    - Examples of handling different response scenarios
+
+14. **Lifecycle** (`14-lifecycle.ts`)
+    - Demonstrates the k6 test lifecycle hooks
+    - Shows how to use setup and teardown functions
+    - Examples of managing test state across iterations
+
+15. **Abort** (`15-abort.ts`)
+    - Shows how to handle test abortion scenarios
+    - Demonstrates graceful test termination
+    - Examples of cleanup during test abortion
+
 ## Running Tests
 
-To run any test, use the following command:
-
+First, navigate to the tests directory:
 ```bash
-k6 run tests/<test-file-name>
+cd tests
+```
+
+Then run any test using the following command:
+```bash
+k6 run <test-file-name>
 ```
 
 Examples:
 ```bash
+# Run first script
+k6 run 1-first-script.ts
+
 # Run smoke test
-k6 run tests/smoke-test.ts
+k6 run 2-smoke-test.ts
 
 # Run load test
-k6 run tests/load-test.ts
-
-# Run stress test
-k6 run tests/stress-test.ts
+k6 run 3-load-test.ts
 ```
 
 ## Test Configuration

@@ -25,6 +25,4 @@ export default function () {
     http.get('https://run.mocky.io/v3/0530b12d-0e2a-4fc7-9587-1ba0fd9ce814');
     /* Mocked endpoint returning HTTP 201 Created response with a 2 second delay. */
     http.get('https://run.mocky.io/v3/7ff1df74-9cb0-47fd-af20-a86dab65fa5c?mocky-delay=2000ms');
-    
-    
 }
