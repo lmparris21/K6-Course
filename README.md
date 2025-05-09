@@ -6,6 +6,7 @@ This repository contains a comprehensive suite of k6 performance testing scripts
 
 - [k6](https://k6.io/docs/getting-started/installation/) installed on your system
 - Node.js and npm installed
+- Docker Desktop installed on your system (for running the test API)
 
 ## Setup
 
@@ -13,6 +14,12 @@ This repository contains a comprehensive suite of k6 performance testing scripts
 ```bash
 npm install
 ```
+
+2. For tests that require the test API:
+   - Navigate to the test-api-docker-image folder
+   - Start the API by running: `docker-compose up -d`
+   - The API will be available at http://localhost:8000/
+   - To stop the API when done, run: `docker compose down`
 
 ## Available Tests
 
@@ -85,6 +92,30 @@ The project includes several types of performance tests:
     - Shows how to handle test abortion scenarios
     - Demonstrates graceful test termination
     - Examples of cleanup during test abortion
+
+16. **HTTP GET** (`16-http-get.ts`)
+    - Demonstrates how to make simple HTTP GET requests using k6
+    - Shows basic usage of the http module
+    - Includes examples of HTTP debugging options
+    - Requires the test API to be running via Docker
+
+17. **HTTP CRUD** (`17-http-crud.ts`)
+    - Demonstrates a complete CRUD (Create, Read, Update, Delete) workflow
+    - Shows authentication and token handling
+    - Covers PUT, POST, PATCH, and DELETE HTTP methods
+    - Includes request/response validation
+    - Requires the test API to be running via Docker
+
+18. **Environment Variables** (`18-env-vars.ts`)
+    - Shows how to use environment variables in k6 tests
+    - Demonstrates accessing variables through the __ENV object
+    - Example of parameterizing tests for different environments
+
+19. **Random Sleep** (`19-random-sleep.ts`)
+    - Demonstrates using randomized sleep durations
+    - Shows how to import and use external JavaScript libraries
+    - Example of simulating variable user behavior
+    - Uses the k6-utils library for random number generation
 
 ## Running Tests
 
