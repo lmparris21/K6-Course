@@ -21,6 +21,12 @@ npm install
    - The API will be available at http://localhost:8000/
    - To stop the API when done, run: `docker compose down`
 
+## Project Structure
+
+### Images Folder
+The `images/` directory contains screenshots and visual documentation related to k6 performance testing, including:
+- **k6 Cloud Dashboard Example** (`k6-cloud-dashboard-example.png`): Shows a real k6 Cloud dashboard displaying test results with performance metrics, including P95 response times, request rates, HTTP failures, and VU scaling over time. This demonstrates the advanced visualization capabilities available when using k6 Cloud for test result analysis and team collaboration.
+
 ## Available Tests
 
 The project includes several types of performance tests:
@@ -140,6 +146,21 @@ The project includes several types of performance tests:
     - Demonstrates using PapaParse library to parse CSV content
     - Provides an example of data-driven testing with CSV files
     - Shows efficient data loading with SharedArray
+
+24. **k6 Cloud Integration** (`24-k6-cloud.ts`)
+    - Demonstrates how to integrate k6 tests with Grafana Cloud
+    - Shows cloud configuration options and project setup
+    - Covers authentication and API key configuration
+    - Examples of running tests in the cloud vs. local execution with cloud streaming
+    - Provides guidance for advanced metrics and visualization in the cloud dashboard
+
+25. **k6 Test API with Cloud Reporting** (`25-k6-test-api.ts`)
+    - Comprehensive test demonstrating a complete user workflow with the test API
+    - Features k6 Cloud integration for real-time monitoring and advanced analytics
+    - Includes user registration, authentication, and full CRUD operations
+    - Shows advanced cloud reporting configuration with thresholds and stages
+    - Demonstrates the benefits of cloud-based performance analysis and team collaboration
+    - Requires the test API to be running via Docker
 
 ## Running Tests
 
