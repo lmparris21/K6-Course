@@ -15,6 +15,12 @@ export default function () {
     http.get('https://quickpizza.grafana.com/test.k6.io/');
 
     console.log('- VU stage -');
-    /* Pause execution for a random duration between 1 and 5 seconds */
+    /* 
+     * Random sleep implementation
+     * - Uses randomIntBetween() to generate a random integer between min and max values (inclusive)
+     * - Adds variability to simulate real user behavior (users don't act at precise intervals)
+     * - Helps prevent "thundering herd" problems where all VUs hit the system simultaneously
+     * - Reduces artificial patterns in the test that could skew results
+     */
     sleep(randomIntBetween(1, 5));
 }

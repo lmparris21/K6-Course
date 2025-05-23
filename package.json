@@ -1,5 +1,9 @@
 {
   "devDependencies": {
-    "@types/k6": "^1.0.2"
+    "@types/k6": "^1.0.2",
+    "@types/papaparse": "^5.3.16"
+  },
+  "dependencies": {
+    "papaparse": "^5.5.2"
   }
 }

@@ -117,6 +117,30 @@ The project includes several types of performance tests:
     - Example of simulating variable user behavior
     - Uses the k6-utils library for random number generation
 
+20. **Random String** (`20-random-string.ts`)
+    - Demonstrates using the randomString utility to generate unique values
+    - Shows how to create random usernames, passwords, and other test data
+    - Useful for creating dynamic test data on the fly
+    - Uses the k6-utils library for string generation
+
+21. **Random Item** (`21-random-item.ts`)
+    - Shows how to select random items from arrays using the randomItem utility
+    - Demonstrates creating data variety in tests without hardcoding values
+    - Helps simulate real user behavior by introducing randomness
+    - Uses the k6-utils library to select random elements
+
+22. **External JSON** (`22-external-json.ts`)
+    - Demonstrates loading test data from external JSON files
+    - Shows how to use SharedArray for efficient data sharing between VUs
+    - Explains separation of test logic and test data
+    - Provides an example of data-driven testing with JSON
+
+23. **External CSV** (`23-external-csv.ts`)
+    - Shows how to work with external CSV data in k6 tests
+    - Demonstrates using PapaParse library to parse CSV content
+    - Provides an example of data-driven testing with CSV files
+    - Shows efficient data loading with SharedArray
+
 ## Running Tests
 
 First, navigate to the tests directory:
